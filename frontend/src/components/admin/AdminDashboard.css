@@ -1,0 +1,76 @@
+.filter-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 200px;
+}
+
+.filter-group label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.custom-select {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-paper);
+  color: var(--text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+  min-width: 200px;
+}
+
+.custom-select:hover {
+  border-color: var(--primary-main);
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: var(--primary-main);
+  box-shadow: 0 0 0 2px rgba(var(--primary-main-rgb), 0.2);
+}
+
+.custom-select option {
+  padding: 0.5rem;
+  background-color: var(--bg-paper);
+  color: var(--text-primary);
+}
+
+.ban-form-group {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ban-form-group label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Add CSS variables for theming */
+:root {
+  --primary-main: #1976d2;
+  --primary-main-rgb: 25, 118, 210;
+  --text-primary: #000000de;
+  --bg-paper: #fff;
+  --border-color: #0000003b;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #fff;
+    --bg-paper: #121212;
+    --border-color: #ffffff3b;
+  }
+} 
